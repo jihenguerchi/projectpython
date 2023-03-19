@@ -1,0 +1,16 @@
+projet python :
+1-cd python-app
+docker build .
+2-docker run -it sha256:715a6b1303a7f3a00cec52224de0609d1489f187952a7b14778236e9e5a108e6
+3- docker run -it --name python sha256:715a6b1303a7f3a00cec52224de0609d1489f187952a7b14778236e9e5a108e6
+docker stop python
+docker start python
+4-docker container prune
+docker image prune
+5-docker build -t py:1 .
+6-docker run -it --rm py:1
+Dockerfile :
+FROM python
+WORKDIR /app
+COPY . /app
+CMD [ "python", "bmi.py" ]
